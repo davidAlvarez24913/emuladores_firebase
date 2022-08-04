@@ -5,6 +5,7 @@ import { auth } from "./config/firebase";
 import routes from "./config/routes";
 import Center from "./components/utils/Center";
 import AuthChecker from "./components/auth/AuthChecker";
+import { mockData } from "./orderZod";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -29,6 +30,8 @@ function App() {
 
   return (
     <div>
+      <h2>hola</h2>
+      <p>{JSON.stringify(mockData)}</p>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           {routes.map((route, index) => (

@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@anatine/zod-mock": "^3.5.6",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
+    "@faker-js/faker": "^6.3.1",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.9.2",
     "@testing-library/jest-dom": "^5.16.4",
@@ -21,7 +23,8 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.0",
     "typescript": "^4.7.4",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "zod": "^3.17.10"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,7 +37,6 @@
     "deploy": "gh-pages -d build",
     "pull": "git pull && npm i && npm start",
     "start-emulator": "cd functions/ && rm -r lib/ && npm run build && cd .. && firebase emulators:start --import=emulator --project demo-test "
-
   },
   "eslintConfig": {
     "extends": "react-app"
